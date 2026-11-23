@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toronto Weather Now</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <p class="small-title">LAB 6 · WORKING WITH API</p>
+            <h1>Toronto Weather Now</h1>
+        </div>
+        <button id="refresh-button">Refresh weather</button>
+    </header>
+
+    <main>
+        <section class="weather-card" id="weather-card">
+            <div class="place-row">
+                <div>
+                    <p class="label">CURRENT CONDITIONS</p>
+                    <h2>Toronto, Ontario</h2>
+                </div>
+                <p id="updated-time">Loading live data...</p>
+            </div>
+
+            <div class="main-weather">
+                <div class="weather-icon" id="weather-icon">○</div>
+                <div>
+                    <div class="temperature-row">
+                        <p class="temperature" id="temperature">--</p>
+                        <button class="unit-button" id="unit-button">°C</button>
+                    </div>
+                    <p class="condition" id="condition">Checking the weather</p>
+                    <p id="day-note">Please wait a moment.</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <article>
+                    <p class="label">FEELS LIKE</p>
+                    <p class="detail-value" id="feels-like">--</p>
+                </article>
+                <article>
+                    <p class="label">HUMIDITY</p>
+                    <p class="detail-value" id="humidity">--</p>
+                </article>
+                <article>
+                    <p class="label">WIND</p>
+                    <p class="detail-value" id="wind">--</p>
+                </article>
+                <article>
+                    <p class="label">CLOUD COVER</p>
+                    <p class="detail-value" id="cloud-cover">--</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>About this page</h2>
+            <p>
+                This page requests current Toronto weather with JavaScript. The API sends JSON data,
+                then the page updates the temperature, weather details, icon, and background colour.
+            </p>
+            <p class="status-message" id="status-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Weather data from <a href="https://open-meteo.com/" target="_blank">Open-Meteo</a>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
